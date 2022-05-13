@@ -28,7 +28,7 @@ An example of a company using a staging database and a star schema data warehous
 ![Data Warehouse Tables](https://github.com/richardgourley/sql-staging-database-and-data-warehouse/blob/main/data_warehouse_tables.png)
 
 ## QUESTIONS FOR ANALYSIS
-**Through native SQL queries or tool such as PowerBI, the star schema is optimized to answer questions like these:**
+**Through native SQL queries or BI tools such as PowerBI, the star schema is optimized to answer questions like these:**
 1. Is there a particular day of the month we have more outages? Is there a company reason for this? (DimDate table)
 2. Is there a particular office that has more incidents than others? (DimOffice table)
 3. Is there a specific employee that reports more incidents than others?  Could an investigation and better staff training solve this? (DimEmployee table)
