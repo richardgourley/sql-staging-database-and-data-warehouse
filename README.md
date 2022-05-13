@@ -8,8 +8,8 @@ An example of a company using a staging database and a star schema data warehous
 
 ## STAGING TABLES
 - It is considered good practice to create a staging database which the data warehouse can be fed data from.
-- The main reason for having a staging database is that we only want the main company transaction database to be mainly used for inserting data such as employees, sales, incidents, orders etc.
-- Therefore, a staging database can 
+- The main reason for having a staging database is that we only want the main company transaction database to be used for inserting data such as new employees, sales details, incidents, orders etc.
+- Therefore, a staging database can act as a read only database where data is extracted from, transformed and loaded into the data warehouse tables.
 - The staging tables in this example are tables taken from a main company transaction database related to cloud service incidents.
 
 ![Staging Tables](https://github.com/richardgourley/sql-staging-database-and-data-warehouse/blob/main/staging_tables.png)
