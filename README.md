@@ -7,14 +7,18 @@ An example of a company using a staging database and a star schema data warehous
 - Staff log any incidents with their cloud services and how long any downtime was, in minutes.
 
 ## STAGING TABLES
+
+![Staging Tables](https://github.com/richardgourley/sql-staging-database-and-data-warehouse/blob/main/staging_tables.png)
+
 - It is considered good practice to create a staging database which the data warehouse can be fed data from.
 - The main reason for having a staging database is that we only want the main company transaction database to be used for inserting data such as new employees, sales details, incidents, orders etc.
 - Therefore, a staging database can act as a read only database where data is extracted from, transformed and loaded into the data warehouse tables.
 - The staging tables in this example are tables taken from a main company transaction database related to cloud service incidents.
 
-![Staging Tables](https://github.com/richardgourley/sql-staging-database-and-data-warehouse/blob/main/staging_tables.png)
-
 ## DATA WAREHOUSE TABLES
+
+![Data Warehouse Tables](https://github.com/richardgourley/sql-staging-database-and-data-warehouse/blob/main/data_warehouse_tables.png)
+
 - The data warehouse tables are a de-normalized version of the staging tables, optimized for data analysis.
 - The data warehouse table examples give a simple example of a star schema.
 - In this star schema, the FactIncidents table is made up of columns that are linked to the unique surrogate keys (not business keys) of the dimension tables.
@@ -24,8 +28,6 @@ An example of a company using a staging database and a star schema data warehous
 - Notice that the FactIncidents table has numerous foreign keys - this allows filtering by the dimension tables (whether using SQL, PowerBI, Tableau)
 - Star and snowflake schemas are tailored to data analysis where you want to find out how results look by different dimensions.
 - This data warehouse could allow us to answer these type of questions efficiently:
-
-![Data Warehouse Tables](https://github.com/richardgourley/sql-staging-database-and-data-warehouse/blob/main/data_warehouse_tables.png)
 
 ## QUESTIONS FOR ANALYSIS
 **Through native SQL queries or BI tools such as PowerBI, the star schema is optimized to answer questions like these:**
