@@ -12,6 +12,8 @@ An example of a company using a staging database and a star schema data warehous
 - Therefore, a staging database can 
 - The staging tables in this example are tables taken from a main company transaction database related to cloud service incidents.
 
+![Staging Tables](https://github.com/richardgourley/staging_tables.png)
+
 ## DATA WAREHOUSE TABLES
 - The data warehouse tables are a de-normalized version of the staging tables, optimized for data analysis.
 - The data warehouse table examples give a simple example of a star schema.
@@ -22,6 +24,8 @@ An example of a company using a staging database and a star schema data warehous
 - Notice that the FactIncidents table has numerous foreign keys - this allows filtering by the dimension tables (whether using SQL, PowerBI, Tableau)
 - Star and snowflake schemas are tailored to data analysis where you want to find out how results look by different dimensions.
 - This data warehouse could allow us to answer these type of questions efficiently:
+
+![Data Warehouse Tables](https://github.com/richardgourley/datawarehouse_tables.png)
 
 ## QUESTIONS FOR ANALYSIS
 **Through native SQL queries or tool such as PowerBI, the star schema is optimized to answer questions like these:**
