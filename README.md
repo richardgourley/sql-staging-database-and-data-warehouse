@@ -23,13 +23,14 @@ An example of a company using a staging database and a star schema data warehous
 - Star and snowflake schemas are tailored to data analysis where you want to find out how results look by different dimensions.
 - This data warehouse could allow us to answer these type of questions efficiently:
 
-## ANALYSIS QUESTIONS
+## QUESTIONS FOR ANALYSIS
 **Through native SQL queries or tool such as PowerBI, the star schema is optimized to answer questions like these:**
 1. Is there a particular day of the month we have more outages? Is there a company reason for this? (DimDate table)
 2. Is there a particular office that has more incidents than others? (DimOffice table)
 3. Is there a specific employee that reports more incidents than others?  Could an investigation and better staff training solve this? (DimEmployee table)
 4. Is there a specific cloud service or cloud provider that keeps letting us down in terms of downtime and regularity of problems? (DimCloudService, DimCloudProvider)
 5. Could it be that we mainly have problems in one region or one country?  (DimCountry, DimRegion)
+6. What is the average downtime in minutes per region/ office/ country? (DimRegion, DimOffice, DimCountry)
 
 ## CONTENTS
 **Staging Tables (staging schema)**
